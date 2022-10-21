@@ -4,13 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".noteActivity">
+    tools:context=".NoteActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="뒤로가기"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="21dp" />
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="627dp" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="108dp"
+        android:layout_height="41dp"
+        android:text="저장"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        tools:layout_editor_absoluteY="627dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
