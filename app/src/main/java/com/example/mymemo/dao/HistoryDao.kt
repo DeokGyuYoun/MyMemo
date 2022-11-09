@@ -1,6 +1,7 @@
 package com.example.mymemo.dao
 
 import androidx.room.*
+import com.example.mymemo.model.Memo
 import com.example.mymemo.model.User
 
 @Dao
@@ -20,4 +21,12 @@ interface UserDao {
 
     @Delete
     fun delete(user: User)
+}
+
+@Dao
+interface MemoDao {
+    @Query("SELECT * FROM user")
+    fun getAll(): List<Memo>
+
+
 }

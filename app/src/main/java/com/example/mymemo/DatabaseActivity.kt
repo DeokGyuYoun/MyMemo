@@ -2,9 +2,7 @@ package com.example.mymemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.room.Room
-import com.example.mymemo.model.User
-import com.example.mymemo.AppDatabase
+import com.example.mymemo.DataBase.AppDatabase
 
 class DatabaseActivity : AppCompatActivity() {
     private var catDb : AppDatabase? = null

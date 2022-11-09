@@ -1,4 +1,4 @@
-package com.example.mymemo
+package com.example.mymemo.DataBase
 
 import android.content.Context
 import androidx.room.Database
@@ -19,7 +19,7 @@ abstract class AppDatabase : RoomDatabase() {
                 synchronized(AppDatabase::class) {
                     INSTANCE = Room.databaseBuilder(
                         context.applicationContext,
-                        AppDatabase::class.java, "cat.db"
+                        AppDatabase::class.java, "Note.db"
                     )
                         .fallbackToDestructiveMigration()
                         .build()

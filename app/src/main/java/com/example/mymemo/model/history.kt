@@ -10,3 +10,9 @@ data class User(
     @ColumnInfo(name = "first_name") val firstName: String?,
     @ColumnInfo(name = "last_name") val lastName: String?
 )
+
+@Entity
+data class Memo(
+    @ColumnInfo var subject: String?,
+    @ColumnInfo var content: String?
+)
