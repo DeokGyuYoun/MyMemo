@@ -4,8 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
-data class Memo(
-    @PrimaryKey var subject: String,
-    @ColumnInfo var content: String?
-)
+class test {
+    @Entity(tableName = "word_table")
+    class Word(@PrimaryKey @ColumnInfo(name = "word") val word: String)
+}

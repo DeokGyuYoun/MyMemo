@@ -4,12 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.mymemo.dao.UserDao
-import com.example.mymemo.model.User
+import com.example.mymemo.dao.MemoDao
+import com.example.mymemo.model.Memo
 
-@Database(entities = [User::class], version = 1)
+@Database(entities = [Memo::class], version = 1)
+
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun userDao(): UserDao
+    abstract fun memoDao(): MemoDao
+
 
     companion object {
         private var INSTANCE: AppDatabase? = null
@@ -33,3 +35,5 @@ abstract class AppDatabase : RoomDatabase() {
         }
     }
 }
+
+

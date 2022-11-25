@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
+import com.example.mymemo.DataBase.AppDatabase
 import com.example.mymemo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +18,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
+
+        val db = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java, "MemoDB"
+        ).build()
 
         binding.addBtn.setOnClickListener { view ->
             val intent = Intent(this@MainActivity, NoteActivity::class.java)
